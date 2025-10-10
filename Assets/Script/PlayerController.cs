@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            anim.SetBool("jump",false); // Диактивируем прыжок
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); //Прыжок
+            anim.SetBool("jump", true); // Активируем прыжок
         }
     }
 }
