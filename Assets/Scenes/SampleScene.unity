@@ -1057,6 +1057,7 @@ GameObject:
   - component: {fileID: 396532208}
   - component: {fileID: 396532212}
   - component: {fileID: 396532213}
+  - component: {fileID: 396532214}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1229,6 +1230,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &396532214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396532207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00b09581f0b3ba4cb134e20d90c876f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
+  currentHealth: 0
 --- !u!1 &458352907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1450,7 @@ GameObject:
   - component: {fileID: 1160106251}
   - component: {fileID: 1160106250}
   - component: {fileID: 1160106249}
+  - component: {fileID: 1160106253}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1517,8 +1533,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2143944993}
   - {fileID: 336974226}
+  - {fileID: 2143944993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1526,6 +1542,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1160106253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160106248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003931c789d517244a689e6a669dc1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1503393909
 GameObject:
   m_ObjectHideFlags: 0
