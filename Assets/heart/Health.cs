@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
     public float startingHealth;
     public float currentHealth;
     private Animator anim;
-    private bool dead = false;
+    public bool dead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,10 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(1);
+        }
     }
     public void TakeDamage(float _damage)
     {
