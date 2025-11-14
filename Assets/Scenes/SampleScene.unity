@@ -167,6 +167,37 @@ Transform:
   - {fileID: 90938248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &53774272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53774273}
+  m_Layer: 0
+  m_Name: shotPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53774273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53774272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65, y: -0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 396532211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80834964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,6 +2329,7 @@ GameObject:
   - component: {fileID: 396532212}
   - component: {fileID: 396532213}
   - component: {fileID: 396532214}
+  - component: {fileID: 396532215}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2431,7 +2463,8 @@ Transform:
   m_LocalPosition: {x: -2.3568916, y: -1.5549879, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 53774273}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &396532212
@@ -2485,6 +2518,20 @@ MonoBehaviour:
   startingHealth: 3
   currentHealth: 0
   dead: 0
+--- !u!114 &396532215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396532207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e4802892cf05744aa39262c6ea2883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPos: {fileID: 53774273}
+  bullet: {fileID: 237866497947211135, guid: 16b80f79d700e0047973b9ccd2219a68, type: 3}
 --- !u!4 &429033139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7001777435932049748, guid: 60a10ee24c872054baeb988479b435ee, type: 3}
@@ -2857,9 +2904,10 @@ GameObject:
   - component: {fileID: 810651890}
   - component: {fileID: 810651894}
   - component: {fileID: 810651895}
+  - component: {fileID: 810651896}
   m_Layer: 0
-  m_Name: NPC
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3024,6 +3072,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &810651896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810651889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6639a1b389a6e4a9fed9336969b994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 2
+  currentHealth: 2
+  dead: 0
 --- !u!1001 &861813095
 PrefabInstance:
   m_ObjectHideFlags: 0
