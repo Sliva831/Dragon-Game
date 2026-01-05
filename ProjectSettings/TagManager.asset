@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - Enemy
   - DeathZone
+  - checkPoint
   layers:
   - Default
   - TransparentFX
