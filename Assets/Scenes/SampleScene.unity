@@ -2436,6 +2436,8 @@ MonoBehaviour:
   startingHealth: 3
   currentHealth: 0
   dead: 0
+  iframesDuration: 3
+  numberOfFlashes: 8
 --- !u!114 &396532215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3773,7 +3775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1250675719
 MonoBehaviour:
   m_ObjectHideFlags: 0
